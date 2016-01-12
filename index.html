@@ -7,6 +7,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE HTML>
 <html>
 <head>
+<META NAME="robots" CONTENT="noindex">
 <!-- <meta http-equiv="refresh" content="0; url=http://www.fundamine.com/" /> -->
 <link rel="shortcut icon" href="./images/logo_lifetym.png" >
 <title>Lifetym: The best planning app</title>
@@ -38,7 +39,7 @@ var _gaq = _gaq || [];
 _gaq.push(['_setAccount', 'UA-46391576-1']);
 _gaq.push(['_trackPageview']);
 (function() {
-var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; 
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
 
 ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
 
@@ -48,12 +49,12 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
 <!-- Javascript to animate scroll! -->
 <script type="text/javascript">
 				jQuery(document).ready(function($) {
-			$(".scroll").click(function(event){		
+			$(".scroll").click(function(event){
 				event.preventDefault();
 				$('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
 			});
 		}); //end animate scroll
-		</script>	
+		</script>
 </head>
 <body>
 <!-- Header Section starts here! -->
@@ -63,7 +64,7 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
               <div class="menu">
                 <a href="#" class="right_bt" id="activator"><img src="./images/nav.png" alt="" /></a>
                     <div class="box" id="box">
-                       <div class="box_content">                                           
+                       <div class="box_content">
                           <div class="box_content_center">
                              <div class="form_content">
                                  <div class="menu_box_list">
@@ -75,7 +76,7 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
                           </ul>
                           </div>
                                <a class="boxclose" id="boxclose"><img src="./images/close.png" alt=""></a>
-                             </div>                
+                             </div>
                              <div class="clear"></div>
                            </div>
                          </div>
@@ -99,19 +100,19 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
                   if (e.keyCode == 27) { $('#box').animate({'top':'-700px'},500); }   // esc
                   });
                   $(document).ready(function(){
-                  
+
                   //Hide (Collapse) the toggle containers on load
-                  $(".toggle_container").hide(); 
-                  
+                  $(".toggle_container").hide();
+
                   //Switch the "Open" and "Close" state per click then slide up/down (depending on open/close state)
                   $(".trigger").click(function(){
                     $(this).toggleClass("active").next().slideToggle("slow");
                     return false; //Prevent the browser jump to the link anchor
                   });
-                  
+
                   });
                 </script>
-                </div>    
+                </div>
            <div class="clear"></div>
           </div>
           <div class="wrap">
@@ -134,12 +135,12 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
         <div class="wrap">
           <!-- Plan Moments Section starts here! -->
           <div class="plan_moments">
-            <div class="plan_moments_img">                    
-                          <img src="./images/plan_section_graphic.png" alt="">               
+            <div class="plan_moments_img">
+                          <img src="./images/plan_section_graphic.png" alt="">
             </div>
             <div class="plan_moments_desc">
                         <h2>Explore Amazing Recommendations!</h2>
-                        <p>Make your weekends awesome!<br> Explore our suggestions or collaborate with friends and create your own private plan.</p> 
+                        <p>Make your weekends awesome!<br> Explore our suggestions or collaborate with friends and create your own private plan.</p>
             </div>
           </div>
         </div>
@@ -163,7 +164,7 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
           <div class="wrap">
             <h2>Like What You See? SignUp for Early Access!</h2>
                   <div class="force_msg">
-                      <div class="msg_normal" id="msg_normal" name="msg_normal"> <p> We don't spam. Promise!</p> </div> 
+                      <div class="msg_normal" id="msg_normal" name="msg_normal"> <p> We don't spam. Promise!</p> </div>
                       <div class="errormsg" id="errormsg" name="errormsg"></div>
                       <div class="results" name="results" id="results"></div>
                   </div>
@@ -176,11 +177,11 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
                     </div>
                   </div>
                   <div class="social_icons">
-                            <p> Follow Us! </p> 
+                            <p> Follow Us! </p>
                             <ul>
                             <li class="facebook"><a href="https://www.facebook.com/lifetymapp" target="_blank"><img src= "./images/ic_facebook.png"> </a></li>
                             <li class="twitter"><a href="https://twitter.com/lifetymapp" target="_blank"><img src= "./images/ic_twitter.png"> </a></li>
-                            <li class="mail"><a href="mailto:tarkeshwar@lifetym.me" target="_blank"><img src= "./images/ic_mail.png"> </a></li>                                
+                            <li class="mail"><a href="mailto:tarkeshwar@lifetym.me" target="_blank"><img src= "./images/ic_mail.png"> </a></li>
                             </ul>
                   </div>
         </div>
@@ -193,13 +194,13 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
         </div>
       </div>
         <script type="text/javascript">
-                $(document).ready(function() {      
+                $(document).ready(function() {
                 $().UItoTop({ easingType: 'easeOutQuart' });
-                
+
               });
       </script>
                 <a href="#" id="toTop"><span id="toTopHover"> </span></a>
-        
+
         <script src="./js/classie.js"></script>
         <script src="./js/cbpScroller.js"></script>
         <script>
