@@ -20,30 +20,42 @@ ga('create', 'UA-46391576-3', 'auto');
 ga('send', 'pageview');
 </script>
 <style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,dl,dt,dd,ol,nav ul,nav li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
+article, aside, details, figcaption, figure,footer, header, hgroup, menu, nav, section {display: block;}
+ol,ul{list-style:none;margin:0;padding:0;}
+blockquote,q{quotes:none;}
+blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}
+table{border-collapse:collapse;border-spacing:0;}
+/* start editing from here */
 body{
     font-family: 'Source Sans Pro';
     background-color: #fff;
     padding-left: 15px;
     padding-right: 15px;
+    padding-bottom: 50px;
 }
 .profileheader{
-    margin-top:60px;
-    margin-left:auto;
-    margin-right:auto;
-    text-align:center;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    padding-left: 40px;
+    position: absolute;
 }
 .profileheader img{
     max-height: 100px;
 }
 .profilequicklinks{
-    margin-left:auto;
-    margin-right:auto;
-    text-align:center;
-    margin-top: 20px;
+    margin-right: auto;
+    text-align: left;
+    margin-top: 220px;
+    margin-left: 30px;
+    position: absolute;
 }
 .profilequicklinks span{
     font-size: 18px;
     margin: 10px;
+    display: block;
 }
 a{
     text-decoration: none;
@@ -73,21 +85,135 @@ a{
 .profilesocial img{
     max-width: 30px;
 }
+.profileprojectlist{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    max-width: 760px;
+    margin-top:50px;
+}
+.profileprojectcard{
+    display: inline-block;
+    margin-left: 25px;
+    margin-right: 25px;
+    vertical-align: top;
+    margin-top: 25px;
+}
+.profileprojectcard h1{
+    color: #000;
+    font-size: 16px;
+    margin-top: 5px;
+}
+.profileprojectcard img{
+    max-width: 200px;
+}
+.profileprojectcardtime{
+    font-size: 13px;
+    color: #727272;
+}
+@media screen and (max-width: 1024px) {
+    .profileheader{
+        padding-left: 20px;
+    }
+    .profilequicklinks{
+        margin-left: 7px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .profileheader{
+        margin-top: 60px;
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        padding: 0px;
+    }
+    .profilequicklinks{
+        margin-top: 5px;
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        padding: 0px;
+    }
+    .profilequicklinks span{
+        display: inline;
+    }
+
+}
+@media screen and (max-width: 460px) {
+    .profileheader{
+
+    }
+    .profilequicklinks span{
+        font-size: 14px;
+    }
+    .profileprojectcard img{
+        max-width: 130px;
+    }
+    .profileprojectcard h1{
+        font-size: 15px;
+    }
+}
+@media screen and (max-width: 410px) {
+    .profileprojectcard{
+        display: block;
+    }
+    .profileprojectcard img{
+        max-width: 160px;
+    }
+    .profileprojectcard h1{
+        font-size: 16px;
+    }
+}
 </style>
 </head>
 <body>
     <div class="profileheader" style="">
-         <a href="./"><img src="./images/profilepic2.png"></a>
+         <a href="./"><img src="./images/profilepic.png"></a>
     </div>
     <div class="profilequicklinks">
-        <span><a href="./projects">Recent Projects</a></span>
+        <span><a href="./projects.html">Recent Projects</a></span>
         <span><a href="./images/tarak_resume.pdf">Resume</a></span>
         <span><a href="mailto:tarkeshwarrpsingh@gmail.com">Say hello!</a></span>
     </div>
-    <div class="profiledescription">
-        <p>Hi! I am Tarkeshwar Singh, Co-Founder of <a href="https://www.fundamine.com">FundaMine</a>. Don't worry about the pronunciation of my name, just call me Tarak instead.</p>
-        <p>I am a Bangalore based entrepreneur cum product manager. I have been building things since my sophomore year in college. I am a biz-dev guy turned product person & hacker. <a href="https://www.fundamine.com">FundaMine</a> was the last thing I hacked.</p>
-        <p>I love talking, thinking and working on things that seem like 'the next big thing'. These days a lot of my time is spent studying blockchain applications, fintech products, machine learning and data analytics. Drop me a <a href="mailto:tarkeshwarrpsingh@gmail.com">line</a> on your next big idea and land yourself a great product person :) </p>
+    <div class="profileprojectlist">
+        <div class="profileprojectcard">
+            <a href="https://www.fundamine.com">
+                <img src="./images/fundamine.jpg" alt="FundaMine">
+                <h1>FundaMine<span class="profileprojectcardtime"> (2015-now)</span></h1>
+            </a>
+        </div>
+        <div class="profileprojectcard">
+            <a href="http://getlumos.co">
+                <img src="./images/lumos.jpg" alt="Lumos">
+                <h1>Lumos<span class="profileprojectcardtime"> (2014-15)</span></h1>
+            </a>
+        </div>
+        <div class="profileprojectcard">
+            <a href="http://ocutagsnap.com">
+                <img src="./images/ocutagsnap.jpg" alt="Ocutag Snap">
+                <h1>Ocutag Snap<span class="profileprojectcardtime"> (2013-14)</span></h1>
+            </a>
+        </div>
+        <div class="profileprojectcard">
+            <a href="http://www.booksnap.com">
+                <img src="./images/booksnap.jpg" alt="BookSnap">
+                <h1>BookSnap<span class="profileprojectcardtime"> (2011-13)</span></h1>
+            </a>
+        </div>
+        <div class="profileprojectcard">
+            <a href="http://slideshare.com">
+                <img src="./images/zerolitter.jpg" alt="Zero Litter">
+                <h1>Bin Redux<span class="profileprojectcardtime"> (2013)</span></h1>
+            </a>
+        </div>
+        <div class="profileprojectcard">
+            <a href="http://slideshare.com">
+                <img src="./images/freemium.jpg" alt="Behavioral Economics">
+                <h1>Behavioral Economics <br>& Freemium<span class="profileprojectcardtime"> (2013)</span></h1>
+            </a>
+        </div>
     </div>
     <div class="profilesocial">
         <span><a href="https://twitter.com/trollkeswar"><img src="./images/twitter.png" alt="Twitter"></a></span>
