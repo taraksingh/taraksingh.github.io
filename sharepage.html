@@ -175,6 +175,21 @@ body{
     margin-top: 20px;
 }
 
+.pdfLink{
+    margin-top: 20px;
+    color:#212121;
+    font-size: 22px;
+    font-weight: 400;
+    display: none;
+}
+
+.pdfLink a{
+    color: #4285F4;
+    font-weight: 600;
+
+}
+
+
 @media only screen and (max-width: 728px) {
     .navInput{
         display: none;
@@ -213,13 +228,27 @@ body{
    }(document));
 </script>
 <script type="text/javascript">
+function setCookie(cname, cvalue, exdays) {
+        var d = new Date();
+        d.setTime(d.getTime() + (exdays*24*60*60*1000));
+        var expires = "expires="+d.toUTCString();
+        document.cookie = cname + "=" + cvalue + "; " + expires;
+    }
+    if(getCookie("HLShareURL")==encodeURIComponent(window.location.href)){
+        document.getElementById("pdflink").style.display="block";
+    }
+    else{
+        document.getElementById("pdflink").style.display="none";
+    }
+</script>
+<script type="text/javascript">
     // fb share
     function fbShare(){
          FB.ui(
             {
               method: 'feed',
               name: 'Facebook Dialogs',
-              link: 'http://developers.facebook.com/docs/reference/dialogs/',
+              link: window.location.href,
               picture: 'http://fbrell.com/f8.jpg',
               caption: 'Reference Documentation',
               description: 'Dialogs provide a simple, consistent interface for applications to interface with users.',
@@ -228,18 +257,20 @@ body{
 
             function(response) {
               if (response && response.post_id) {
-
-                // THE POST WAS PUBLISHED
-                alert('Post was published.');
-
+                setCookie("HLShareURL",encodeURIComponent(window.location.href),300);
+                document.getElementById("pdflink").style.display="block";
               } else {
-
-                // THE POST WAS NOT PUBLISHED
-                alert('Post was not published.');
+                alert('Please donate or share on Facebook to access the link');
 
               }
             }
           );
+    }
+    function setCookie(cname, cvalue, exdays) {
+        var d = new Date();
+        d.setTime(d.getTime() + (exdays*24*60*60*1000));
+        var expires = "expires="+d.toUTCString();
+        document.cookie = cname + "=" + cvalue + "; " + expires;
     }
 </script>
 </head>
@@ -284,7 +315,8 @@ body{
         Share on Facebook to<br> unlock content
     </button>
 </div>
-<div class="pdfLink">
+<div class="pdfLink" id="pdflink">
+    Please click on this <a href="http://tarkeshwarsingh.com" target="_blank" rel="nofollow">link</a> to download your formula book.
 </div>
 </div>
 </body>
